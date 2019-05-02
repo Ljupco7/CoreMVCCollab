@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -66,8 +67,22 @@ namespace GYM.CoreApp.WebUI
 
             app.UseAuthentication();
 
+            //app.UseMvcWithDefaultRoute();
+
+
+
             app.UseMvc(routes =>
             {
+                routes.MapAreaRoute(
+                name: "Employees",
+                areaName: "Employees",
+                template: "Employees/{controller=Home}/{action=Index}/{id?}");
+
+                //    routes.MapRoute(
+                //      name: "Employees",
+                //      template: "{area:Employees}/{controller=Employee}/{action=Index}/{id?}" // Make changes if routing doesn't work
+                //    );
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
