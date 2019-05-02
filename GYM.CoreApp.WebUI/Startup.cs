@@ -76,12 +76,8 @@ namespace GYM.CoreApp.WebUI
                 routes.MapAreaRoute(
                 name: "Employees",
                 areaName: "Employees",
-                template: "Employees/{controller=Home}/{action=Index}/{id?}");
+                template: "Employees/{controller=Employees}/{action=Index}/{id?}"); // if the name of the area is written before the controller, we need to add the name of the area in the URL itself too in order for the routing to work 
 
-                //    routes.MapRoute(
-                //      name: "Employees",
-                //      template: "{area:Employees}/{controller=Employee}/{action=Index}/{id?}" // Make changes if routing doesn't work
-                //    );
 
                 routes.MapRoute(
                     name: "default",
