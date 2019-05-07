@@ -20,10 +20,15 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
             _context = context;
         }
 
+
+
+
         // GET: Employees/Employees
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Employees.ToListAsync());
+            List<Employee> empList = await _context.Employees.ToListAsync();
+
+            return View(empList);
         }
 
         // GET: Employees/Employees/Details/5
