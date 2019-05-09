@@ -48,7 +48,6 @@ F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\GYM.CoreApp.WebUI.TagHe
 F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\GYM.CoreApp.WebUI.RazorCoreGenerate.cache
 F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.g.cshtml.cs
 F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
-F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
 F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
 F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 F:\Gym.CoreMVC\GYM.CoreApp.WebUI\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs

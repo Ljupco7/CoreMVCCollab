@@ -79,9 +79,11 @@ namespace GYM.CoreApp.WebUI.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(200);
 
-                    b.Property<DateTime>("DateOfBirth");
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime");
 
-                    b.Property<DateTime>("DateWhenJoined");
+                    b.Property<DateTime>("DateWhenJoined")
+                        .HasColumnType("datetime");
 
                     b.Property<string>("EMBG")
                         .IsRequired()
