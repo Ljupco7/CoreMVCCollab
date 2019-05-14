@@ -13,18 +13,18 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 1 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\Views\_ViewImports.cshtml"
+#line 1 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\_ViewImports.cshtml"
 using GYM.CoreApp.WebUI;
 
 #line default
 #line hidden
-#line 2 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\Views\_ViewImports.cshtml"
+#line 2 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\_ViewImports.cshtml"
 using GYM.CoreApp.WebUI.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"273ed297c1a3d583be2022dcf3c2327af09748e0", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a2064b72f0bf78e57610e2f095c6a8b47d82ab4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a2064b72f0bf78e57610e2f095c6a8b47d82ab4", @"/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

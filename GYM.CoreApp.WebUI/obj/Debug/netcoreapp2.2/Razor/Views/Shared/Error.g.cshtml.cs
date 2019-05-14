@@ -13,18 +13,18 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 1 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\Views\_ViewImports.cshtml"
+#line 1 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\_ViewImports.cshtml"
 using GYM.CoreApp.WebUI;
 
 #line default
 #line hidden
-#line 2 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\Views\_ViewImports.cshtml"
+#line 2 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\_ViewImports.cshtml"
 using GYM.CoreApp.WebUI.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d6a5625cc8fb4476f348b0fe9041c550465d8bf9", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a2064b72f0bf78e57610e2f095c6a8b47d82ab4", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a2064b72f0bf78e57610e2f095c6a8b47d82ab4", @"/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

@@ -13,7 +13,18 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#line 1 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\_ViewImports.cshtml"
+using GYM.CoreApp.WebUI;
+
+#line default
+#line hidden
+#line 2 "F:\Gym.CoreMVC\GYM.CoreApp.WebUI\_ViewImports.cshtml"
+using GYM.CoreApp.WebUI.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"13b82ef97968a56a4de533f67cf3e21d662f41aa", @"/Areas/Identity/Pages/_ViewStart.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a2064b72f0bf78e57610e2f095c6a8b47d82ab4", @"/_ViewImports.cshtml")]
     public class Areas_Identity_Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
