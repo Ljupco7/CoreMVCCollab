@@ -25,8 +25,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="DateOfBirth" class="control-label">Date of birth</label>
-                @*<input asp-for="DateOfBirth" class="form-control" />*@
-                <input asp-for="DateOfBirth" type="date" name="bday" class="form-control">
+                <input asp-for="DateOfBirth" type="datetime-local" name="bday" class="form-control">
                 <span asp-validation-for="DateOfBirth" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -52,7 +51,7 @@
             <div class="form-group">
                 <label asp-for="DateWhenJoined" class="control-label">Date when joined</label>
                 @*<input asp-for="DateWhenJoined" class="form-control" />*@
-                <input asp-for="DateWhenJoined" type="date" name="joinedDate" class="form-control">
+                <input asp-for="DateWhenJoined" type="datetime-local" name="joinedDate" class="form-control">
                 <span asp-validation-for="DateWhenJoined" class="text-danger"></span>
             </div>
             <div class="form-group form-check">

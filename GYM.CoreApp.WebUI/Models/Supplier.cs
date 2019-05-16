@@ -7,11 +7,11 @@ namespace GYM.CoreApp.WebUI.Models
         [Key]
         public int SupplierId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Full name is required")]
         [MaxLength(200), MinLength(2)]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Bank account number is required")]
         [Display(Name = "Bank account")]
         public long BankAccount { get; set; }
 

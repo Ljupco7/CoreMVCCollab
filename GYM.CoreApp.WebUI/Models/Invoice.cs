@@ -14,15 +14,15 @@ namespace GYM.CoreApp.WebUI.Models
         public int SupplierId { get; set; }
         public Supplier Supplier { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Date ordered is required")]
         [Display(Name = "Date ordered")]
         public DateTime DateOrdered { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Date due is required")]
         [Display(Name = "Date due")]
         public DateTime DateDue { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Total invoice value is required")]
         [Display(Name = "Total value")]
         public int TotalValue { get; set; }
     }
