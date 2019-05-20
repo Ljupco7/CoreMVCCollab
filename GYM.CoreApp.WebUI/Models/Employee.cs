@@ -18,8 +18,8 @@ namespace GYM.CoreApp.WebUI.Models
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
+        //[Range(typeof(DateTime), "1/1/1966", "1/1/2020", ErrorMessage = "Value for {0} must be between {1} and {2}")]
         [Required(ErrorMessage = "Date Of Birth is required")]
-        [Range(typeof(DateTime), "1/1/1966", "1/1/2020", ErrorMessage = "Value for {0} must be between {1} and {2}")]
         [Display(Name = "Date of birth")]
         public DateTime DateOfBirth { get; set; }
 
