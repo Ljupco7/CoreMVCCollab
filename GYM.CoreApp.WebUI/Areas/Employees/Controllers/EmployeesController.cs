@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using GYM.CoreApp.WebUI.Data;
 using GYM.CoreApp.WebUI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
 {
     [Area("Employees")]
+    [Route("Employees/[controller]/[action]")]
     public class EmployeesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,6 +23,7 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
 
 
         // GET: Employees/Employees
+        //[Route("Employees/Employees/Index")]
         public async Task<IActionResult> Index()
         {
             List<Employee> empList = await _context.Employees.ToListAsync();
