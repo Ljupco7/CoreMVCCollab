@@ -1,36 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using GYM.CoreApp.WebUI.Data;
+using GYM.CoreApp.WebUI.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using GYM.CoreApp.WebUI.Data;
-using GYM.CoreApp.WebUI.Models;
-using Microsoft.EntityFrameworkCore;
 
-namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
+namespace GYM.CoreApp.WebUI.Areas.Products.Controllers
 {
-    [Area("Employees")]
-    [Route("Employees/[controller]/[action]")]
-    public class EmployeesController : Controller
+    [Area("Products")]
+    [Route("Products/[controller]/[action]")]
+    public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public EmployeesController(ApplicationDbContext context)
+        public ProductsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-
-
-
-        // GET: Employees/Employees
+        // GET: Product/Products
         public async Task<IActionResult> Index()
         {
-            List<Employee> empList = await _context.Employees.ToListAsync();
-
-            return View(empList);
+            return View(await _context.Products.ToListAsync());
         }
 
-        // GET: Employees/Employees/Details/5
+        // GET: Product/Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -38,39 +32,39 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.EmployeeId == id);
-            if (employee == null)
+            var product = await _context.Products
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return View(employee);
+            return View(product);
         }
 
-        // GET: Employees/Employees/Create
+        // GET: Product/Products/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Employees/Employees/Create
+        // POST: Product/Products/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EmployeeId,FirstName,LastName,DateOfBirth,EMBG,Address,PhoneNumber,SalaryPerMonth,DateWhenJoined,StillEmployed")] Employee employee)
+        public async Task<IActionResult> Create([Bind("ID,Name")] Product product)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(employee);
+                _context.Add(product);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction(nameof(Index));
             }
-            return View(employee);
+            return View(product);
         }
 
-        // GET: Employees/Employees/Edit/5
+        // GET: Product/Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,22 +72,22 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee == null)
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
             {
                 return NotFound();
             }
-            return View(employee);
+            return View(product);
         }
 
-        // POST: Employees/Employees/Edit/5
+        // POST: Product/Products/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("EmployeeId,FirstName,LastName,DateOfBirth,EMBG,Address,PhoneNumber,SalaryPerMonth,DateWhenJoined,StillEmployed")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name")] Product product)
         {
-            if (id != employee.EmployeeId)
+            if (id != product.ID)
             {
                 return NotFound();
             }
@@ -102,12 +96,12 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
             {
                 try
                 {
-                    _context.Update(employee);
+                    _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EmployeeExists(employee.EmployeeId))
+                    if (!ProductExists(product.ID))
                     {
                         return NotFound();
                     }
@@ -118,10 +112,10 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(employee);
+            return View(product);
         }
 
-        // GET: Employees/Employees/Delete/5
+        // GET: Product/Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,30 +123,30 @@ namespace GYM.CoreApp.WebUI.Areas.Employees.Controllers
                 return NotFound();
             }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.EmployeeId == id);
-            if (employee == null)
+            var product = await _context.Products
+                .FirstOrDefaultAsync(m => m.ID == id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            return View(employee);
+            return View(product);
         }
 
-        // POST: Employees/Employees/Delete/5
+        // POST: Product/Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
-            _context.Employees.Remove(employee);
+            var product = await _context.Products.FindAsync(id);
+            _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool EmployeeExists(int id)
+        private bool ProductExists(int id)
         {
-            return _context.Employees.Any(e => e.EmployeeId == id);
+            return _context.Products.Any(e => e.ID == id);
         }
     }
 }
